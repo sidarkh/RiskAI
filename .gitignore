@@ -1,0 +1,43 @@
+# ============================================
+# RiskAI - .gitignore
+# ============================================
+
+# --- Daten ---
+# Große Datendateien gehören NICHT auf GitHub!
+# GitHub hat ein Limit von 100 MB pro Datei.
+# Unser Datensatz ist ~150 MB.
+data/raw/
+data/processed/
+
+# --- Modelle ---
+# Trainierte Modelle können sehr groß sein
+models/*.pkl
+models/*.joblib
+models/*.h5
+models/*.keras
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# --- Virtuelle Umgebung ---
+venv/
+env/
+.venv/
+
+# --- Jupyter Notebook ---
+.ipynb_checkpoints/
+
+# --- IDE ---
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# --- Umgebungsvariablen ---
+.env

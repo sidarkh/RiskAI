@@ -1,0 +1,31 @@
+# ============================================
+# RiskAI - Abhängigkeiten
+# ============================================
+
+# --- Datenanalyse ---
+pandas>=2.0.0
+numpy>=1.24.0
+
+# --- Visualisierung ---
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# --- Machine Learning ---
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+lightgbm>=4.0.0
+imbalanced-learn>=0.11.0
+
+# --- Deep Learning ---
+tensorflow>=2.15.0
+
+# --- Explainable AI ---
+shap>=0.43.0
+
+# --- API ---
+fastapi>=0.104.0
+uvicorn>=0.24.0
+
+# --- Utilities ---
+joblib>=1.3.0
+jupyter>=1.0.0
