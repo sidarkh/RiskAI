@@ -49,7 +49,3 @@ pip install -r requirements.txt
 - TensorFlow/Keras
 - SHAP
 - FastAPI
-
-## Autor
-
-Entwickelt als professionelles Data-Science-Portfolio-Projekt.
