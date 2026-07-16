@@ -6,7 +6,9 @@
 # Große Datendateien gehören NICHT auf GitHub!
 # GitHub hat ein Limit von 100 MB pro Datei.
 # Unser Datensatz ist ~150 MB.
-data/raw/
+data/raw/*
+!data/raw/*.zip
+!data/raw/.gitkeep
 data/processed/
 
 # --- Modelle ---
