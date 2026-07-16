@@ -2,7 +2,7 @@
 
 RiskAI ist ein produktionsreifes, hochmodernes Softwaresystem zur Echtzeit-Erkennung von Kreditkartenbetrug (Credit Card Fraud Detection). Es vereint fortschrittliche Data Science, Machine Learning, Deep Learning, Explainable AI (XAI) und Web-API-Entwicklung in einer konsistenten Pipeline.
 
-Dieses Repository wurde als professionelles, bewerbungsreifes ML-Engineer-Portfolio-Projekt entworfen.
+Dieses Repository zeigt eine vollständige Implementierung, wie sie in modernen Fraud-Detection-Teams von FinTechs und Banken eingesetzt wird.
 
 ---
 
