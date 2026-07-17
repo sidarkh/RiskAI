@@ -1,0 +1,43 @@
+name: RiskAI CI Pipeline
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    # 1. Repository-Code klonen
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # 2. Python-Umgebung einrichten
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.12'  # Stabile Python-Version für GitHub-Runner
+
+    # 3. Cache für Pip-Abhängigkeiten einrichten (beschleunigt zukünftige Builds)
+    - name: Cache dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+
+    # 4. Abhängigkeiten installieren
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest httpx  # Stellen sicher, dass Test-Tools vorhanden sind
+
+    # 5. Unit-Tests mit pytest ausführen
+    - name: Run Tests
+      run: |
+        pytest
